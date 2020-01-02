@@ -25,7 +25,10 @@ public class StudentAdapter (var mCtx:Context,
         val name:TextView=v.findViewById(R.id.textView)
         val id:TextView=v.findViewById(R.id.textView2)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e5ef12f5477382a48aa4ab43845058600d4ddb74
         val student:Student=item[position]
         name.text=student.name
         id.text=student.id

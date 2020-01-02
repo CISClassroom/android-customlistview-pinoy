@@ -26,7 +26,11 @@
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="264dp"
+<<<<<<< HEAD
                 android:layout_height="184dp"
+=======
+                android:layout_height="279dp"
+>>>>>>> e5ef12f5477382a48aa4ab43845058600d4ddb74
                 android:layout_weight="1"
                 app:srcCompat="@drawable/bg" />
 
@@ -62,6 +66,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="" />
+<<<<<<< HEAD
 
         <TextView
             android:id="@+id/textView9"
@@ -94,19 +99,30 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="" />
+=======
+>>>>>>> e5ef12f5477382a48aa4ab43845058600d4ddb74
     </LinearLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
+<<<<<<< HEAD
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginBottom="150dp"
+=======
+        android:layout_width="197dp"
+        android:layout_height="229dp"
+>>>>>>> e5ef12f5477382a48aa4ab43845058600d4ddb74
         android:src="@drawable/bg"
         app:civ_border_color="#FF000000"
         app:civ_border_width="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toTopOf="parent" />
+=======
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+>>>>>>> e5ef12f5477382a48aa4ab43845058600d4ddb74
 
 </androidx.constraintlayout.widget.ConstraintLayout>

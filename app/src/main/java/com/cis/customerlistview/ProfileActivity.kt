@@ -30,6 +30,7 @@ class ProfileActivity : AppCompatActivity() {
             iconimg.setImageResource(R.drawable.pro)
             val bgimg: ImageView = findViewById(R.id.imageView5)
             bgimg.setImageResource(R.drawable.bg)
+<<<<<<< HEAD
             val path: TextView = findViewById(R.id.textView8)
             path.text = "สาขาวิทยาการคอมพิวเตอร์และสารสนเทศ"
             val tel: TextView = findViewById(R.id.textView9)
@@ -41,6 +42,8 @@ class ProfileActivity : AppCompatActivity() {
 
 
 
+=======
+>>>>>>> e5ef12f5477382a48aa4ab43845058600d4ddb74
 
         }
         if (id == "1") {
@@ -52,6 +55,7 @@ class ProfileActivity : AppCompatActivity() {
             iconimg.setImageResource(R.drawable.toung)
             val bgimg: ImageView = findViewById(R.id.imageView5)
             bgimg.setImageResource(R.drawable.cis)
+<<<<<<< HEAD
             val path: TextView = findViewById(R.id.textView8)
             path.text = "สาขาวิทยาการคอมพิวเตอร์และสารสนเทศ"
             val tel: TextView = findViewById(R.id.textView9)
@@ -60,6 +64,8 @@ class ProfileActivity : AppCompatActivity() {
             email.text = "Youqer5@gmail.com"
             val githb: TextView = findViewById(R.id.textView11)
             githb.text = "github.com/ToungGHOST"
+=======
+>>>>>>> e5ef12f5477382a48aa4ab43845058600d4ddb74
 
         }
         if (id == "2") {
@@ -71,6 +77,7 @@ class ProfileActivity : AppCompatActivity() {
                 iconimg.setImageResource(R.drawable.kung)
                 val bgimg: ImageView = findViewById(R.id.imageView5)
                 bgimg.setImageResource(R.drawable.cis)
+<<<<<<< HEAD
             val path: TextView = findViewById(R.id.textView8)
             path.text = "สาขาวิทยาการคอมพิวเตอร์และสารสนเทศ"
             val tel: TextView = findViewById(R.id.textView9)
@@ -79,6 +86,8 @@ class ProfileActivity : AppCompatActivity() {
             email.text = "sasithon_p@kkumail.com"
             val githb: TextView = findViewById(R.id.textView11)
             githb.text = "github.com/sasithon2541"
+=======
+>>>>>>> e5ef12f5477382a48aa4ab43845058600d4ddb74
             }
             if (id == "3") {
                 val textname: TextView = findViewById(R.id.textView6)
@@ -89,6 +98,7 @@ class ProfileActivity : AppCompatActivity() {
                 iconimg.setImageResource(R.drawable.nan)
                 val bgimg: ImageView = findViewById(R.id.imageView5)
                 bgimg.setImageResource(R.drawable.nanny)
+<<<<<<< HEAD
                 val path: TextView = findViewById(R.id.textView8)
                 path.text = "สาขาวิทยาการคอมพิวเตอร์และสารสนเทศ"
                 val tel: TextView = findViewById(R.id.textView9)
@@ -97,6 +107,8 @@ class ProfileActivity : AppCompatActivity() {
                 email.text = "thidarat_d@kkumail.com"
                 val githb: TextView = findViewById(R.id.textView11)
                 githb.text = "github.com/thidarat"
+=======
+>>>>>>> e5ef12f5477382a48aa4ab43845058600d4ddb74
             }
             if (id == "4") {
                 val textname: TextView = findViewById(R.id.textView6)
@@ -107,6 +119,7 @@ class ProfileActivity : AppCompatActivity() {
                 iconimg.setImageResource(R.drawable.t)
                 val bgimg: ImageView = findViewById(R.id.imageView5)
                 bgimg.setImageResource(R.drawable.kat)
+<<<<<<< HEAD
                 val path: TextView = findViewById(R.id.textView8)
                 path.text = "สาขาวิทยาการคอมพิวเตอร์และสารสนเทศ"
                 val tel: TextView = findViewById(R.id.textView9)
@@ -116,6 +129,8 @@ class ProfileActivity : AppCompatActivity() {
                 val githb: TextView = findViewById(R.id.textView11)
                 githb.text = "github.com/supharatnop"
 
+=======
+>>>>>>> e5ef12f5477382a48aa4ab43845058600d4ddb74
             }
     }
 }
