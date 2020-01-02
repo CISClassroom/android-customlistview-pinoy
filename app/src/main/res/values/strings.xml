@@ -1,11 +1,8 @@
 <resources>
-    <string name="app_name">CustomListView</string>
-
+    <string name="app_name">CustomerListview</string>
     <string-array name="student_name">
-        <item>Kung</item>
-        <item>Toung</item>
-        <item>Aon</item>
-        <item>Toei</item>
-        <item>Nanny</item>
+        <item>aon</item>
+        <item>max</item>
+        <item>toung</item>
     </string-array>
 </resources>

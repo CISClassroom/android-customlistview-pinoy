@@ -1,4 +1,4 @@
-package com.cis.customlistview
+package com.cis.customerlistview
 
 import org.junit.Test
 

@@ -1,68 +1,24 @@
-# รายงานผลการทดลอง
-นายอุทัยพันธ์  เที่ยงโคตร 603410073-5
-นายวิวัฒน์ วงษ์พิชัย 603410217-7
-นางสาวศศิธร พิมมะทา 603410156-1
-นางสาวธิดารัตน์ ดานะพันธ์ 603410204-6
-นางสาวศุภรัตน์ นพวัติ 603410219-3
-## Custom Listview
+package com.cis.customerlistview
 
-แสดงคำสั่งสำหรับแสดงข้อมูลชื่อนักศึกษาภายในกลุ่ม กลุ่มละไม่เกิน 4 คน รายละเอียดข้อมูลประกอบด้วย
+import android.content.Context
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
+import androidx.core.app.ComponentActivity
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 
-- ชื่อ-นามสกุล
-- รหัสนักศึกษา
-- รูปภาพ
 
-เมื่อทำการเลือกรายชื่อนักศึกษาจะทำการเปิดไปยังหน้าที่แสดงข้อมูลนักศึกษาเพิ่มเติม ข้อมูลนักศึกษาประกอบด้วย
 
-- ชื่อ-นามสกุล
-- รหัสนักศึกษา
-- รูปภาพ
-- สาขาวิชา
-- อีเมล
-- เบอร์โทรศัพท์
-- Github
+class ProfileActivity : AppCompatActivity() {
 
-ให้นักศึกษาออกแบบ layout ได้ตามความเหมาสม
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_profile)
 
-## Custom Listview Report
-
-### ข้อมูล Array
-
-```kotlin
-var student:Student= Student("นายอุทัยพันธ์  เที่ยงโคตร","603410073-5",R.drawable.pro,R.drawable.bg)
-
-        var students= mutableListOf<Student>()
-        students.add(student)
-        students.add(Student("นายวิวัฒน์ วงษ์พิชัย","603410217-7",R.drawable.toung,R.drawable.cis))
-        students.add(Student("นางสาวศศิธร พิมมะทา","603410156-1",R.drawable.kung,R.drawable.cis))
-        students.add(Student("นางสาวธิดารัตน์ ดานะพันธ์","603410204-6",R.drawable.nan,R.drawable.nanny))
-        students.add(Student("นางสาวศุภรัตน์ นพวัติ","603410219-3",R.drawable.t,R.drawable.kat))
-```
-
-### Custom Listview Layout
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".CustomListActivity">
-
-    <ListView
-        android:id="@+id/customlistview"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp" />
-</LinearLayout>
-```
-
-### setOnItemClickListener และการส่งข้อมูลไปอีก Activity
-
-```kotlin
-  
         val id = intent.getStringExtra("id")
         Toast.makeText(this,id.toString(),Toast.LENGTH_SHORT).show()
         if (id == "0") {
@@ -161,36 +117,5 @@ var student:Student= Student("นายอุทัยพันธ์  เที
                 githb.text = "github.com/supharatnop"
 
             }
-```
-
-### การรับข้อมูลจากอีก Activity
-
-```kotlin
-public class StudentAdapter(val mCtx: Context,
-                            var resource:Int,
-                            var items:List<Student>) 
-    : ArrayAdapter<Student> (mCtx,resource,items){
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        //return super.getView(position, convertView, parent)
-        val layout:LayoutInflater = LayoutInflater.from(mCtx)
-
-        val v:View = layout.inflate(resource,null)
-        val icon : ImageView = v.findViewById(R.id.imageView)
-        val name : TextView = v.findViewById(R.id.textView)
-        val id:TextView = v.findViewById(R.id.textView2)
-
-        val student:Student = items[position]
-
-        name.text = student.name
-        id.text = student.id
-        try {
-            icon.setImageDrawable(mCtx.getDrawable(student.icon))
-        }
-        catch (ex:Exception){
-
-        }
-
-        return v
     }
 }
-```
