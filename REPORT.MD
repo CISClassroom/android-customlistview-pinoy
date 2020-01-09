@@ -1,15 +1,9 @@
 # รายงานผลการทดลอง
-
-วรรณพงษ์ ภัททิยไพบูลย์ 603410214-3
-
-นายนฤเบศร์ พนะโรจน์ 603410047-6
-
-สิรินาถ จริยพันธ์ 603410221-6
-
-นายปาณัสม์ คำอินทร์ 603410319-9
-
-นางสาวอาทิตยา ฉิมมาแก้ว 603410321-2
-
+นายอุทัยพันธ์  เที่ยงโคตร 603410073-5
+นายวิวัฒน์ วงษ์พิชัย 603410217-7
+นางสาวศศิธร พิมมะทา 603410156-1
+นางสาวธิดารัตน์ ดานะพันธ์ 603410204-6
+นางสาวศุภรัตน์ นพวัติ 603410219-3
 ## Custom Listview
 
 แสดงคำสั่งสำหรับแสดงข้อมูลชื่อนักศึกษาภายในกลุ่ม กลุ่มละไม่เกิน 4 คน รายละเอียดข้อมูลประกอบด้วย
@@ -35,12 +29,14 @@
 ### ข้อมูล Array
 
 ```kotlin
-var students = mutableListOf<Student>()
-students.add(Student("วรรณพงษ์ ภัททิยไพบูลย์", "603410214-3", R.drawable.wannaphong))
-students.add(Student("นายนฤเบศร์ พนะโรจน์", "603410047-6", R.drawable.pro))
-students.add(Student("สิรินาถ จริยพันธ์", "603410221-6", R.drawable.ff))
-students.add(Student("นายปาณัสม์ คำอินทร์", "603410319-9", R.drawable.phai))
-students.add(Student("นางสาวอาทิตยา ฉิมมาแก้ว", "603410321-2", R.drawable.fahcricle))
+var student:Student= Student("นายอุทัยพันธ์  เที่ยงโคตร","603410073-5",R.drawable.pro,R.drawable.bg)
+
+        var students= mutableListOf<Student>()
+        students.add(student)
+        students.add(Student("นายวิวัฒน์ วงษ์พิชัย","603410217-7",R.drawable.toung,R.drawable.cis))
+        students.add(Student("นางสาวศศิธร พิมมะทา","603410156-1",R.drawable.kung,R.drawable.cis))
+        students.add(Student("นางสาวธิดารัตน์ ดานะพันธ์","603410204-6",R.drawable.nan,R.drawable.nanny))
+        students.add(Student("นางสาวศุภรัตน์ นพวัติ","603410219-3",R.drawable.t,R.drawable.kat))
 ```
 
 ### Custom Listview Layout
@@ -66,25 +62,60 @@ students.add(Student("นางสาวอาทิตยา ฉิมมาแ
 ### setOnItemClickListener และการส่งข้อมูลไปอีก Activity
 
 ```kotlin
- listview.setOnItemClickListener { parent, view, position, id ->
-            //Toast.makeText(this,position.toString(),Toast.LENGTH_SHORT).show()
-            if (position == 0) {
-                var i = Intent(this, Wannaphong::class.java)
-                startActivity(i)
-            } else if (position == 1) {
-                var i = Intent(this, mark::class.java)
-                startActivity(i)
-            } else if (position == 2) {
-                var i = Intent(this, SirinatActivity::class.java)
-                startActivity(i)
-            } else if (position == 3) {
-                var i = Intent(this, PhaiActivity::class.java)
-                startActivity(i)
-            } else if (position == 4) {
-                var i = Intent(this, FahActivity::class.java)
-                startActivity(i)
-            }
+  val id = intent.getStringExtra("id")
+        Toast.makeText(this,id.toString(),Toast.LENGTH_SHORT).show()
+        if (id == "0") {
+            val textname: TextView = findViewById(R.id.textView6)
+            textname.text = "นายอุทัยพันธ์ เที่ยงโคตร"
+            val textid: TextView = findViewById(R.id.textView7)
+            textid.text = "603410073-5"
+            val iconimg: ImageView = findViewById(R.id.profile_image)
+            iconimg.setImageResource(R.drawable.pro)
+            val bgimg: ImageView = findViewById(R.id.imageView5)
+            bgimg.setImageResource(R.drawable.bg)
+
         }
+        if (id == "1") {
+            val textname: TextView = findViewById(R.id.textView6)
+            textname.text = "วิวัฒน์ วงษ์พิชัย"
+            val textid: TextView = findViewById(R.id.textView7)
+            textid.text = "603410217-7"
+            val iconimg: ImageView = findViewById(R.id.profile_image)
+            iconimg.setImageResource(R.drawable.toung)
+            val bgimg: ImageView = findViewById(R.id.imageView5)
+            bgimg.setImageResource(R.drawable.cis)
+
+        }
+        if (id == "2") {
+                val textname: TextView = findViewById(R.id.textView6)
+                textname.text = "นางสาวศศิธร พิมมะทา"
+                val textid: TextView = findViewById(R.id.textView7)
+                textid.text = "603410156-1"
+                val iconimg: ImageView = findViewById(R.id.profile_image)
+                iconimg.setImageResource(R.drawable.kung)
+                val bgimg: ImageView = findViewById(R.id.imageView5)
+                bgimg.setImageResource(R.drawable.cis)
+            }
+            if (id == "3") {
+                val textname: TextView = findViewById(R.id.textView6)
+                textname.text = "นางสาวธิดารัตน์ ดานะพันธ์"
+                val textid: TextView = findViewById(R.id.textView7)
+                textid.text = "603410204-6"
+                val iconimg: ImageView = findViewById(R.id.profile_image)
+                iconimg.setImageResource(R.drawable.nan)
+                val bgimg: ImageView = findViewById(R.id.imageView5)
+                bgimg.setImageResource(R.drawable.nanny)
+            }
+            if (id == "4") {
+                val textname: TextView = findViewById(R.id.textView6)
+                textname.text = "นางสาวศุภรัตน์ นพวัติ"
+                val textid: TextView = findViewById(R.id.textView7)
+                textid.text = "603410219-3"
+                val iconimg: ImageView = findViewById(R.id.profile_image)
+                iconimg.setImageResource(R.drawable.t)
+                val bgimg: ImageView = findViewById(R.id.imageView5)
+                bgimg.setImageResource(R.drawable.kat)
+            }
 ```
 
 ### การรับข้อมูลจากอีก Activity
@@ -92,7 +123,7 @@ students.add(Student("นางสาวอาทิตยา ฉิมมาแ
 ```kotlin
 public class StudentAdapter(val mCtx: Context,
                             var resource:Int,
-                            var items:List<Student>) // รับจากพารามิเตอร์
+                            var items:List<Student>) 
     : ArrayAdapter<Student> (mCtx,resource,items){
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         //return super.getView(position, convertView, parent)
